@@ -1,9 +1,9 @@
 const fonts = {
-  Roboto: {
-    normal: 'fonts/Roboto-Regular.ttf',
-    bold: 'fonts/Roboto-Medium.ttf',
-    italics: 'fonts/Roboto-Italic.ttf',
-    bolditalics: 'fonts/Roboto-MediumItalic.ttf'
+  IPAexMincho: {
+    normal: 'fonts/ipaexm.ttf',
+    bold: 'fonts/ipaexm.ttf',
+    italics: 'fonts/ipaexm.ttf',
+    bolditalics: 'fonts/ipaexm.ttf'
   }
 };
 const PdfPrinter = require('pdfmake/src/printer');
@@ -17,10 +17,18 @@ function mm2pt(v) {
 const docDefinition = {
   pageSize: { width: mm2pt(100), height: mm2pt(148) }, // 100 x 148 mm
   pageMargins: [0, 0, 0, 0],
+  defaultStyle: {
+    font: 'IPAexMincho'
+  },
   content: [
     {
-      text: '1',
+      text: 'あ',
       absolutePosition: { x: mm2pt(10), y: mm2pt(20) },
+      fontSize: 50
+    },
+    {
+      text: 'い',
+      absolutePosition: { x: mm2pt(10), y: mm2pt(20) + 50 },
       fontSize: 50
     },
     {
