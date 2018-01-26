@@ -11,6 +11,7 @@ const printer = new PdfPrinter(fonts);
 const fs = require('fs');
 
 const docDefinition = {
+  pageSize: { width: 283.47, height: 419.54 }, // 100 x 148 mm
   content: [
     'First paragraph',
     'Another paragraph, this time a little bit longer to make sure, this line will be divided into at least two lines'
